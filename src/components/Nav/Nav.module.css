@@ -1,0 +1,130 @@
+/* =========================
+   Header block
+   ========================= */
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #0c0a09;
+  box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+}
+
+.header_title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+/* =========================
+   Desktop navigation
+   ========================= */
+
+.header_nav {
+  display: none;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .header_nav {
+    display: flex;
+  }
+}
+
+/* =========================
+   Mobile menu wrapper
+   ========================= */
+
+.header_mobileMenu {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .header_mobileMenu {
+    display: none;
+  }
+}
+
+/* =========================
+   Mobile navigation
+   ========================= */
+
+.header_mobileNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .header_mobileNav {
+    display: none;
+  }
+}
+
+/* =========================
+   Mobile menu visibility
+   ========================= */
+
+.header_menu_visible {
+  transform: translateX(0);
+}
+
+.header_menu_hidden {
+  transform: translateX(100%);
+}
+
+/* =========================
+   Navigation links
+   ========================= */
+
+.header_link_active,
+.header_link_inactive {
+  font-size: 1.2rem;
+  color: #fbfbfc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header_link_active {
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.header_link_inactive:hover {
+  color: #ff0000;
+}
+
+/* =========================
+   Burger button animation
+   ========================= */
+
+.header_burger_clicked:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+  transition: all 0.3s ease-in-out;
+}
+
+.header_burger_clicked:nth-child(2) {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.header_burger_clicked:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+  transition: all 0.3s ease-in-out;
+}
+
+.header_burger_unclicked {
+  transform: rotate(0) translate(0);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
