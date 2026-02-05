@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 
-function MainContent() {
+const MainContent = () => {
   return (
-    <div className="flex-1 flex flex-col">
+    <div>
       <Outlet />
     </div>
   );
-}
+};
 
 export default MainContent;
