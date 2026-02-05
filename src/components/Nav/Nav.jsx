@@ -3,14 +3,14 @@ import { useState } from "react";
 import styles from "./Nav.module.css";
 import { Menu, X } from "lucide-react";
 
-const SiteNav = () => {
+const Nav = () => {
   const navLinks = [
     { label: "Home", url: "/" },
     { label: "About Us", url: "/about" },
     { label: "Contact", url: "/contact" },
   ];
 
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  // const { theme, toggleTheme } = useContext(ThemeContext);
 
   const [isActive, setIsActive] = useState(false);
 
@@ -86,4 +86,4 @@ const SiteNav = () => {
   );
 };
 
-export default SiteNav;
+export default Nav;
