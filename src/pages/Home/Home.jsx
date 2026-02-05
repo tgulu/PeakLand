@@ -1,11 +1,12 @@
 import Nav from "../../components/Nav/Nav";
+import Hero from "../../components/Hero/Hero";
+import styles from "./Home.module.css";
 
 const Home = () => {
   return (
-    <div className="container">
+    <div className={styles.home_container}>
       <Nav />
-      <h2>Welcome to PeakLand</h2>
-      <p>Your adventure starts here!</p>
+      <Hero />
     </div>
   );
 };
