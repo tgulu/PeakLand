@@ -1,0 +1,36 @@
+.hero__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* This is the key change */
+.hero__background {
+  width: 98%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: url("../../assets/blueClean.jpg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  padding-bottom: 3rem;
+}
+
+.hero__text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-left: 20px;
+  text-align: left;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.hero__span {
+  color: var(--span-color);
+}
