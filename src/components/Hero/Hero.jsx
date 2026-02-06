@@ -5,12 +5,32 @@ const Hero = () => {
     <div className={styles.hero__container}>
       <div className={styles.hero__background}>
         <div className={styles.hero__text}>
-          <h1>Peakland</h1>
-          <h2>Cleaning Services</h2>
-          <h3>
+          <h1>Cleaning Services</h1>
+          <h2>
             Professional Cleaning{" "}
             <span className={styles.hero__span}>Services </span>{" "}
-          </h3>
+          </h2>
+          <button className={styles.navbar_cta}>Contact Us</button>
+          {/* Peakland
+Cleaning Services
+
+Professional
+CLEANING
+SERVICES
+
+Sparkling Clean, Every Time!
+
+Our Services Include
+• Residential Cleaning
+• Commercial Cleaning
+• Move In Move Out Cleaning
+• Specialized Services
+
+Contact Us Today!
+
+0758134225
+
+www.peaklandservices.com */}
         </div>
       </div>
     </div>
