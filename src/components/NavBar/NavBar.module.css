@@ -1,0 +1,110 @@
+/* =========================
+   Root variables
+   ========================= */
+
+:root {
+  --navbar_black: #000000;
+  --navbar_blue: #287cdb;
+  --navbar_gray: #1a1a1a;
+  --navbar_white: #ffffff;
+}
+
+/* =========================
+   NavBar wrapper
+   ========================= */
+
+.navbar {
+  padding: 12px;
+  background: white;
+  position: relative;
+  z-index: 10;
+}
+
+/* =========================
+   Inner pill container
+   ========================= */
+
+.navbar_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: var(--navbar_black);
+}
+
+/* =========================
+   Brand
+   ========================= */
+
+.navbar_brand {
+  color: var(--navbar_white);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+
+.navbar_nav {
+  position: relative;
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 999px;
+  background: #0f0f0f;
+}
+
+/* =========================
+   Navigation links
+   ========================= */
+
+.navbar_link,
+.navbar_link_active {
+  position: relative;
+  padding: 10px 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #dcdcdc;
+  z-index: 2;
+}
+
+.navbar_link_active {
+  color: #000000;
+}
+
+/* =========================
+   Active bubble
+   ========================= */
+
+.navbar_bubble_active {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 0;
+  border-radius: 999px;
+  background: #ffffff;
+  transition:
+    transform 0.25s ease,
+    width 0.25s ease;
+  z-index: 1;
+}
+
+/* =========================
+   CTA button
+   ========================= */
+
+.navbar_cta {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
