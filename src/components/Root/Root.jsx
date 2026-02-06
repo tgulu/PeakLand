@@ -1,11 +1,11 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import MainContent from "../maincontent/MainContent";
+import MainContent from "../mainContent/MainContent";
+import styles from "./Root.module.css";
 
 function Root() {
   return (
-    // <div className="min-h-screen flex flex-col">
-    <div>
+    <div className={styles.layout}>
       <Header />
       <MainContent />
       <Footer />
