@@ -1,7 +1,7 @@
 .about {
   width: 100%;
   padding: 5rem 2rem;
-  background-color: var(--background-color);
+  background-color: var(--background-color-dark);
 }
 
 .about__container {
@@ -28,17 +28,19 @@
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
   width: fit-content;
+  color: white;
 }
 
 .about__title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  color: #ffffff;
 }
 
 .about__text {
   font-size: 1rem;
-  color: #666666;
+  color: #fff7f7;
   margin-bottom: 2rem;
   max-width: 480px;
 }
@@ -55,6 +57,7 @@
   margin-bottom: 1rem;
   padding-left: 2rem;
   position: relative;
+  color: white;
 }
 
 .about__list_item::before {
@@ -70,7 +73,7 @@
   padding: 0.8rem 2rem;
   border-radius: 999px;
   border: none;
-  background-color: #2f80ed;
+  background-color: var(--button-blue);
   color: white;
   font-size: 1rem;
   cursor: pointer;
@@ -89,6 +92,9 @@
   width: 100%;
   border-radius: 1.5rem;
   object-fit: cover;
+  box-shadow:
+    rgba(255, 255, 255, 0.6) 5px 5px 20px -7px,
+    rgb(255, 255, 255, 0.5) 0px 1px 3px -1px;
 }
 
 /* Responsive */
