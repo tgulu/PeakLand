@@ -12,7 +12,8 @@
   --accent-color: #ff6f61;
   --button-blue: #287cdb;
 
-  --background-color: linear-gradient(180deg, #f7f8fa, #eef1f6);
+  --background-color: linear-gradient(90deg, #f7f8fa, #eef1f6);
+  --background-color-dark: #141313;
 
   --text-color-white: #ffffff;
   --text-color-black: #000000;
