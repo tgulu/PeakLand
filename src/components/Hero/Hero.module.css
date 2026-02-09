@@ -6,7 +6,7 @@
 
 /* This is the key change */
 .hero__background {
-  width: 98%;
+  width: 100%;
   height: 85vh;
   display: flex;
   flex-direction: column;
@@ -16,12 +16,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   padding-bottom: 3rem;
-  margin-bottom: 0.9rem;
-  box-shadow:
+  /* margin-bottom: 0.9rem; */
+  /* box-shadow:
     rgba(16, 16, 33, 0.7) 10px 20px 20px -10px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
 }
 
 /* .hero__text {
