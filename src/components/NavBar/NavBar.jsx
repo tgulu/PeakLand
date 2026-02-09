@@ -2,7 +2,7 @@ import { useState, useRef, useLayoutEffect } from "react";
 import styles from "./NavBar.module.css";
 
 const NavBar = () => {
-  const links = ["Home", "About", "Service", "Pricing", "Testimonials"];
+  const links = ["Home", "About", "Service", "Testimonials"];
   const [activeIndex, setActiveIndex] = useState(0);
 
   const linkRefs = useRef([]);
