@@ -1,10 +1,10 @@
 import styles from "./About.module.css";
-import aboutOne from "../../assets/ladderClean.jpg";
-import aboutTwo from "../../assets/mop.jpg";
+import cleanImg1 from "../../assets/ladderClean.jpg";
+import cleanImg2 from "../../assets/mop.jpg";
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <div className={styles.about__container}>
         {/* Left content */}
         <div className={styles.about__content}>
@@ -36,13 +36,13 @@ const About = () => {
         {/* Right images */}
         <div className={styles.about__images}>
           <img
-            src={aboutOne}
+            src={cleanImg1}
             alt="Cleaning team"
             className={styles.about__image}
           />
 
           <img
-            src={aboutTwo}
+            src={cleanImg2}
             alt="Professional cleaners"
             className={styles.about__image}
           />
