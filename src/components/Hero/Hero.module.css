@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   background-color: var(--background-color);
+  z-index: 0;
 }
 
-/* This is the key change */
 .hero__background {
   width: 100%;
   height: 85vh;
@@ -23,9 +23,6 @@
     rgba(16, 16, 33, 0.7) 10px 20px 20px -10px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
 }
-
-/* .hero__text {
-} */
 
 .hero__content {
   max-width: 520px;
