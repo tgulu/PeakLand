@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import NavBar from "../NavBar/NavBar";
 
 const Hero = () => {
   return (
