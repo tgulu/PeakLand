@@ -1,122 +1,209 @@
-/* =========================
-   Root variables
-   ========================= */
-
-:root {
-  --navbar-black: #000000;
-  --navbar-purple: #8419d5;
-  --navbar-gray: #1f1e1e;
-  --navbar-white: #ffffff;
-}
-
-/* =========================
-   NavBar wrapper
-   ========================= */
-
-.navbar {
-  position: fixed;
+.header {
+  position: sticky;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  padding: 8px;
-  display: flex;
-  z-index: 100;
+  z-index: 50;
+  background: #ffffff;
+  box-shadow: 0 1px 10px rgba(15, 23, 42, 0.08);
 }
 
-@media (min-width: 2100px) {
-  .navbar {
-    width: 80%;
-  }
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* =========================
-   Inner pill container
-   ========================= */
-
-.navbar_inner {
+.inner {
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
-  padding: 14px 24px;
-  border-radius: 999px;
-  background: var(--navbar-black);
-  box-shadow: 0 5px 40px rgba(16, 25, 13, 0.4);
+  gap: 1rem;
 }
 
-/* =========================
-   Brand
-   ========================= */
-
-.navbar_brand {
-  color: var(--text-color-white);
-  font-weight: 700;
-  font-size: 32px;
-  letter-spacing: 0.4em;
-}
-
-/* =========================
-   Navigation
-   ========================= */
-
-.navbar_nav {
-  position: relative;
+.brand {
   display: flex;
-  gap: 4px;
-  padding: 6px;
-  border-radius: 999px;
-  background: var(--navbar-gray);
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
-/* =========================
-   Navigation links
-   ========================= */
+.brandIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.navbar_link,
-.navbar_link_active {
+.brandIcon span {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandTitle {
+  color: #111827;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.brandSubtitle {
+  color: #6b7280;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.desktopNav {
   position: relative;
-  padding: 10px 18px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  color: #dcdcdc;
-  z-index: 2;
+  display: none;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f8fafc;
+  border-radius: 999px;
+  padding: 0.4rem;
 }
 
-.navbar_link_active {
-  color: #000000;
-}
-
-/* =========================
-   Active bubble
-   ========================= */
-
-.navbar_bubble_active {
+.bubble {
   position: absolute;
-  top: 6px;
-  bottom: 6px;
   left: 0;
+  top: 0.4rem;
+  height: calc(100% - 0.8rem);
   border-radius: 999px;
-  background: #ffffff;
+  background: #2563eb;
   transition:
-    transform 0.25s ease,
-    width 0.25s ease;
-  z-index: 1;
+    transform 0.3s ease,
+    width 0.3s ease;
+  z-index: 0;
 }
 
-/* =========================
-   CTA button
-   ========================= */
-
-.navbar_cta {
-  padding: 10px 20px;
+.navLink,
+.navLinkActive {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 1rem;
   border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.navLink {
+  color: #374151;
+}
+
+.navLink:hover {
+  color: #2563eb;
+}
+
+.navLinkActive {
+  color: #ffffff;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background 0.25s ease;
+  white-space: nowrap;
+}
+
+.cta:hover {
+  background: #1d4ed8;
+}
+
+.mobileToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
   border: none;
-  background: linear-gradient(180deg, #3b82f6, #2563eb);
-  color: white;
-  font-size: 14px;
+  color: #374151;
   cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0 1rem;
+}
+
+.mobileNavLink,
+.mobileNavLinkActive {
+  display: block;
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  font-weight: 500;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.mobileNavLink {
+  color: #374151;
+}
+
+.mobileNavLink:hover {
+  background: #f3f4f6;
+}
+
+.mobileNavLinkActive {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.mobileCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+
+.mobileCta:hover {
+  background: #1d4ed8;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .mobileToggle {
+    display: none;
+  }
+
+  .mobileNav {
+    display: none;
+  }
 }
