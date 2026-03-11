@@ -1,12 +1,36 @@
 import { useState, useRef, useLayoutEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Phone, Menu, X } from "lucide-react";
 import styles from "./NavBar.module.css";
 
 const NavBar = () => {
-  const links = ["Home", "About", "Service", "Testimonials"];
-  const [activeIndex, setActiveIndex] = useState(0);
+  const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/services", label: "Services" },
+    { path: "/about", label: "About" },
+    { path: "/contact", label: "Contact" },
+    { path: "/booking", label: "Book Now" },
+  ];
 
   const linkRefs = useRef([]);
   const bubbleRef = useRef(null);
+
+  const getActiveIndex = () => {
+    const index = navLinks.findIndex((link) => {
+      if (link.path === "/") {
+        return location.pathname === "/";
+      }
+
+      return location.pathname.startsWith(link.path);
+    });
+
+    return index === -1 ? 0 : index;
+  };
+
+  const activeIndex = getActiveIndex();
 
   useLayoutEffect(() => {
     const activeLink = linkRefs.current[activeIndex];
@@ -16,33 +40,95 @@ const NavBar = () => {
 
     bubble.style.transform = `translateX(${activeLink.offsetLeft}px)`;
     bubble.style.width = `${activeLink.offsetWidth}px`;
-  }, [activeIndex]);
+  }, [activeIndex, location.pathname]);
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
 
   return (
-    <header className={styles.navbar}>
-      <div className={styles.navbar_inner}>
-        <div className={styles.navbar_brand}>Peakland</div>
+    <header className={styles.header}>
+      <div className={styles.container}>
+        <div className={styles.inner}>
+          <Link to="/" className={styles.brand} onClick={closeMobileMenu}>
+            <div className={styles.brandIcon}>
+              <span>CS</span>
+            </div>
 
-        <nav className={styles.navbar_nav}>
-          <div ref={bubbleRef} className={styles.navbar_bubble_active} />
+            <div className={styles.brandText}>
+              <div className={styles.brandTitle}>Clean Start Aftercare</div>
+              <div className={styles.brandSubtitle}>
+                Hospital Discharge Support
+              </div>
+            </div>
+          </Link>
 
-          {links.map((label, index) => (
-            <button
-              key={label}
-              ref={(el) => (linkRefs.current[index] = el)}
-              className={
-                index === activeIndex
-                  ? styles.navbar_link_active
-                  : styles.navbar_link
-              }
-              onClick={() => setActiveIndex(index)}
+          <nav className={styles.desktopNav}>
+            <div ref={bubbleRef} className={styles.bubble} />
+
+            {navLinks.map((link, index) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                ref={(el) => {
+                  linkRefs.current[index] = el;
+                }}
+                className={
+                  index === activeIndex ? styles.navLinkActive : styles.navLink
+                }
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            <a href="tel:+1234567890" className={styles.cta}>
+              <Phone size={16} />
+              <span>(123) 456-7890</span>
+            </a>
+          </nav>
+
+          <button
+            className={styles.mobileToggle}
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+            type="button"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {mobileMenuOpen && (
+          <nav className={styles.mobileNav}>
+            {navLinks.map((link) => {
+              const isActive =
+                link.path === "/"
+                  ? location.pathname === "/"
+                  : location.pathname.startsWith(link.path);
+
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={closeMobileMenu}
+                  className={
+                    isActive ? styles.mobileNavLinkActive : styles.mobileNavLink
+                  }
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+
+            <a
+              href="tel:+1234567890"
+              className={styles.mobileCta}
+              onClick={closeMobileMenu}
             >
-              {label}
-            </button>
-          ))}
-        </nav>
-
-        <button className={styles.navbar_cta}>Contact Us</button>
+              <Phone size={16} />
+              <span>(123) 456-7890</span>
+            </a>
+          </nav>
+        )}
       </div>
     </header>
   );
