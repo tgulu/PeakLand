@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { ImageWithFallback } from "../../components/ui/ImageWithFallback/ImageWithFallback";
 import styles from "./Contact.module.css";
 
@@ -42,25 +42,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "(123) 456-7890",
-      link: "tel:+1234567890",
+      details: "07584 134225",
+      link: "tel:+447584134225",
     },
     {
       icon: Mail,
       title: "Email",
-      details: "info@cleanstartaftercare.com",
-      link: "mailto:info@cleanstartaftercare.com",
+      details: "peaklandcleaning@gmail.com",
+      link: "mailto:peaklandcleaning@gmail.com",
     },
     {
       icon: MapPin,
-      title: "Address",
-      details: "123 Healthcare Way, Medical District, City, State 12345",
-      link: null,
-    },
-    {
-      icon: Clock,
-      title: "Hours",
-      details: "24/7 Support Available",
+      title: "Areas We Cover",
+      details: "West Sussex, Brighton & Hove and East Sussex",
       link: null,
     },
   ];
@@ -72,8 +66,9 @@ const Contact = () => {
           <div className={styles.heroContent}>
             <h1>Contact Us</h1>
             <p>
-              We&apos;re here to answer your questions and provide the support
-              you need for a safe recovery journey
+              We&apos;d love to hear from you. Get in touch with our
+              professional team to discuss your cleaning needs or request a free
+              quote.
             </p>
           </div>
         </div>
@@ -83,10 +78,10 @@ const Contact = () => {
         <div className={styles.container}>
           <div className={styles.grid}>
             <div>
-              <h2>Send Us a Message</h2>
+              <h2>Request a Free Quote</h2>
               <p>
-                Fill out the form below and our team will get back to you within
-                24 hours.
+                Fill out the form below and our team will get back to you
+                shortly.
               </p>
 
               {submitted ? (
@@ -137,14 +132,15 @@ const Contact = () => {
                   >
                     <option value="">Select subject</option>
                     <option value="general">General Inquiry</option>
-                    <option value="services">Services Information</option>
-                    <option value="consultation">Request Consultation</option>
+                    <option value="residential">Residential Cleaning</option>
+                    <option value="commercial">Commercial Cleaning</option>
+                    <option value="quote">Request a Free Quote</option>
                   </select>
 
                   <textarea
                     name="message"
                     rows="6"
-                    placeholder="Tell us about your needs..."
+                    placeholder="Tell us about your cleaning needs..."
                     value={formData.message}
                     onChange={handleChange}
                     required
@@ -189,8 +185,8 @@ const Contact = () => {
 
               <div className={styles.imageWrap}>
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1766325693423-69e9fe20605b"
-                  alt="Medical care support"
+                  src="https://unsplash.com/photos/silhouette-of-man-standing-near-glass-window-during-daytime-3hO8igCybds"
+                  alt="Professional cleaning service team"
                   className={styles.image}
                 />
               </div>
@@ -201,11 +197,11 @@ const Contact = () => {
 
       <section className={styles.emergency}>
         <Phone size={48} color="white" />
-        <h2>Need Immediate Assistance?</h2>
-        <p>Our support team is available 24/7 for urgent consultations</p>
-        <a href="tel:+1234567890">
+        <h2>Ready to Book a Cleaning Service?</h2>
+        <p>Call our professional team today to discuss your needs.</p>
+        <a href="tel:+447584134225">
           <Phone size={18} />
-          Call (123) 456-7890
+          Call 07584 134225
         </a>
       </section>
     </div>
