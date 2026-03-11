@@ -52,14 +52,12 @@ const NavBar = () => {
         <div className={styles.inner}>
           <Link to="/" className={styles.brand} onClick={closeMobileMenu}>
             <div className={styles.brandIcon}>
-              <span>CS</span>
+              <span>PL</span>
             </div>
 
             <div className={styles.brandText}>
-              <div className={styles.brandTitle}>Clean Start Aftercare</div>
-              <div className={styles.brandSubtitle}>
-                Hospital Discharge Support
-              </div>
+              <div className={styles.brandTitle}>PeakLand</div>
+              <div className={styles.brandSubtitle}>Cleaning service</div>
             </div>
           </Link>
 
