@@ -1,0 +1,147 @@
+.hero {
+  background: linear-gradient(to bottom right, #eff6ff, #dbeafe);
+  padding: 5rem 0;
+}
+
+.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  color: #4b5563;
+}
+
+.contactSection {
+  padding: 5rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.form button {
+  background: #2563eb;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.infoCard {
+  display: flex;
+  gap: 1rem;
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.imageWrap {
+  margin-top: 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.successBox {
+  background: #ecfdf5;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.successIcon {
+  width: 64px;
+  height: 64px;
+  background: #22c55e;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emergency {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.emergency a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: #2563eb;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid,
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}
