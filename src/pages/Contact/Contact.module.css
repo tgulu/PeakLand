@@ -72,12 +72,21 @@
   gap: 1rem;
 }
 
+.infoList a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .infoCard {
   display: flex;
   gap: 1rem;
   background: #f9fafb;
   padding: 1rem;
   border-radius: 10px;
+}
+
+.infoList a:hover .infoCard {
+  background: #eff6ff;
 }
 
 .iconBox {
