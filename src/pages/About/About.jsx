@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./About.module.css";
 import aboutOne from "../../assets/ladderClean.jpg";
 import aboutTwo from "../../assets/mop.jpg";
@@ -11,26 +12,38 @@ const About = () => {
           <span className={styles.about__badge}>About Us</span>
 
           <h2 className={styles.about__title}>
-            Bringing Freshness Comfort and Care to Every Home
+            Trusted Domestic and Commercial Cleaning Across Sussex
           </h2>
 
           <p className={styles.about__text}>
-            At Peakland we go beyond surface cleaning and bring life back to
-            your space. Our professional team uses eco friendly products and
-            careful attention to detail to deliver consistent results.
+            Peakland Cleaning Services delivers high quality reliable and
+            affordable cleaning solutions tailored to your needs. From routine
+            home cleaning to office maintenance and deep cleaning, our trained
+            team keeps your spaces spotless and comfortable.
+          </p>
+
+          <p className={styles.about__text}>
+            Our mission is to take the stress out of cleaning so you can focus
+            on what matters most. We work with transparency reliability and a
+            customer first approach on every visit.
           </p>
 
           <ul className={styles.about__list}>
             <li className={styles.about__list_item}>
-              Professional and trusted team
+              High quality and consistent service
             </li>
             <li className={styles.about__list_item}>
-              Eco friendly cleaning products
+              Environmentally friendly cleaning practices
             </li>
             <li className={styles.about__list_item}>Satisfaction guaranteed</li>
+            <li className={styles.about__list_item}>
+              Dedicated and well trained team
+            </li>
           </ul>
 
-          <button className={styles.about__button}>Learn More</button>
+          <Link to="/contact" className={styles.about__button}>
+            Request a Free Quote
+          </Link>
         </div>
 
         {/* Right images */}
