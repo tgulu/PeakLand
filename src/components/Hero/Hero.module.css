@@ -1,11 +1,6 @@
 .hero__container {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
-  background-color: var(--background-color);
-  z-index: 0;
-=======
->>>>>>> origin/test
 }
 
 .hero__background {
@@ -19,10 +14,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-<<<<<<< HEAD
-=======
   padding-top: 88px;
->>>>>>> origin/test
   padding-bottom: 3rem;
 }
 
