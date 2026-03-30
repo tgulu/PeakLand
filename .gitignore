@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Environment variables
+.env
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -25,5 +28,6 @@ dist-ssr
 *.docx
 
 
+env
 Peakland Cleaning Services Flyer.jpg
 Peakland Cleaning Services. Write-Up 2.docx
