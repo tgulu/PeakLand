@@ -2,6 +2,7 @@ import Root from "./components/Root/Root";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import Services from "./pages/Services/Services";
 
 const routes = [
   {
@@ -9,8 +10,8 @@ const routes = [
     element: <Root />,
     errorElement: (
       <div style={{ padding: 16 }}>
-        <h1>bbb not found</h1>
-        <p>The page you are looking for does not existmm.</p>
+        <h1>Page not found</h1>
+        <p>The page you are looking for does not exist.</p>
       </div>
     ),
     children: [
@@ -27,6 +28,10 @@ const routes = [
         element: <About />,
       },
       {
+        path: "services",
+        element: <Services />,
+      },
+      {
         path: "contact",
         element: <Contact />,
       },
@@ -36,7 +41,7 @@ const routes = [
         element: (
           <div style={{ padding: 16 }}>
             <h1>Page not found</h1>
-            <p>The page you are looking for does not existmmm.</p>
+            <p>The page you are looking for does not exist.</p>
           </div>
         ),
       },

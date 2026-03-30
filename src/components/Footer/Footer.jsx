@@ -1,73 +1,65 @@
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__container}>
-        {/* Brand column */}
         <div className={styles.footer__brand}>
-          <h3 className={styles.footer__logo}>Peakland</h3>
+          <h3 className={styles.footer__logo}>Peakland Cleaning Services</h3>
           <p className={styles.footer__description}>
-            Professional home and office cleaning services delivering reliable
-            spotless results you can trust.
+            High quality, reliable and affordable domestic and commercial
+            cleaning tailored to your needs across Sussex.
           </p>
 
           <div className={styles.footer__hours}>
-            <strong>Operating Hours</strong>
+            <strong>Service Availability</strong>
             <p>
-              Monday to Saturday
-              <br />7 am to 11 pm
-            </p>
-            <p>
-              Sunday
-              <br />8 am to 5 pm
+              Monday to Sunday
+              <br />
+              Flexible booking slots
             </p>
           </div>
 
           <div className={styles.footer__contact}>
             <strong>Call Us Today</strong>
-            <p>07581 342225</p>
+            <p>07584 134225</p>
+            <p>peaklandcleaning@gmail.com</p>
           </div>
-
-          {/* <div className={styles.footer__socials}>
-            <span>f</span>
-            <span>in</span>
-            <span>ig</span>
-          </div> */}
         </div>
 
-        {/* Cities */}
         <div className={styles.footer__column}>
-          <h4 className={styles.footer__heading}>Cities</h4>
-          <a>London</a>
-          <a>Manchester</a>
-          <a>Birmingham</a>
+          <h4 className={styles.footer__heading}>Areas We Cover</h4>
+          <a>West Sussex</a>
+          <a>Brighton & Hove</a>
+          <a>East Sussex</a>
         </div>
 
-        {/* Company */}
         <div className={styles.footer__column}>
           <h4 className={styles.footer__heading}>Company</h4>
-          <a>About Us</a>
-          <a>Terms of Service</a>
-          <a>Privacy Policy</a>
-          <a>FAQ</a>
-          <a>Contact</a>
+          <a href="/about">About Us</a>
+          <a href="/services">Our Services</a>
+          <a href="/contact">Free Quote</a>
+          <a href="https://www.peaklandservices.com">
+            www.peaklandservices.com
+          </a>
         </div>
 
-        {/* Services */}
         <div className={styles.footer__column}>
           <h4 className={styles.footer__heading}>Services</h4>
-          <a>Home Cleaning</a>
-          <a>Commercial Cleaning</a>
-          <a>Deep Cleaning</a>
-          <a>Move In Out Cleaning</a>
-          <a>Post Construction Cleaning</a>
-          <a>Eco Cleaning Service</a>
-          <a>Airbnb and Rental Cleaning</a>
+          <Link to="/services#domestic-cleaning">Domestic Cleaning</Link>
+          <Link to="/services#commercial-cleaning">Commercial Cleaning</Link>
+          <Link to="/services#window-cleaning">Window Cleaning</Link>
+          <Link to="/services#after-builders-cleaning">
+            After Builders Cleaning
+          </Link>
+          <Link to="/services#holiday-let-cleaning">Holiday Let Cleaning</Link>
+          <Link to="/services#move-in-and-move-out-cleaning">
+            Move In and Move Out Cleaning
+          </Link>
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className={styles.footer__bottom}>
         <span>© 2026 Peakland Cleaning Services</span>
       </div>

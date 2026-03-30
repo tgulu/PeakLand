@@ -9,10 +9,9 @@ const NavBar = () => {
 
   const navLinks = [
     { path: "/", label: "Home" },
-    // { path: "/services", label: "Services" },
+    { path: "/services", label: "Services" },
     { path: "/about", label: "About" },
     { path: "/contact", label: "Contact" },
-    // { path: "/booking", label: "Book Now" },
   ];
 
   const linkRefs = useRef([]);
@@ -56,8 +55,8 @@ const NavBar = () => {
             </div>
 
             <div className={styles.brandText}>
-              <div className={styles.brandTitle}>PeakLand</div>
-              <div className={styles.brandSubtitle}>Cleaning service</div>
+              <div className={styles.brandTitle}>Peakland</div>
+              <div className={styles.brandSubtitle}>Cleaning Services</div>
             </div>
           </Link>
 
@@ -79,9 +78,9 @@ const NavBar = () => {
               </Link>
             ))}
 
-            <a href="tel:+1234567890" className={styles.cta}>
+            <a href="tel:+447584134225" className={styles.cta}>
               <Phone size={16} />
-              <span>(123) 456-7890</span>
+              <span>07584 134225</span>
             </a>
           </nav>
 
@@ -118,12 +117,12 @@ const NavBar = () => {
             })}
 
             <a
-              href="tel:+1234567890"
+              href="tel:+447584134225"
               className={styles.mobileCta}
               onClick={closeMobileMenu}
             >
               <Phone size={16} />
-              <span>(123) 456-7890</span>
+              <span>07584 134225</span>
             </a>
           </nav>
         )}

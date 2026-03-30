@@ -74,6 +74,8 @@
 /* Button */
 
 .about__button {
+  display: inline-flex;
+  align-items: center;
   padding: 0.8rem 2rem;
   border-radius: 999px;
   border: none;
@@ -82,6 +84,7 @@
   font-size: 1rem;
   cursor: pointer;
   width: fit-content;
+  text-decoration: none;
 }
 
 /* Right column images mobile first */

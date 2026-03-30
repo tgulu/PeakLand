@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Globe } from "lucide-react";
 import { ImageWithFallback } from "../../components/ui/ImageWithFallback/ImageWithFallback";
+import contactImage from "../../assets/cleanerBottle.jpg";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
@@ -57,6 +58,12 @@ const Contact = () => {
       details: "West Sussex, Brighton & Hove and East Sussex",
       link: null,
     },
+    {
+      icon: Globe,
+      title: "Website",
+      details: "www.peaklandservices.com",
+      link: null,
+    },
   ];
 
   return (
@@ -66,9 +73,9 @@ const Contact = () => {
           <div className={styles.heroContent}>
             <h1>Contact Us</h1>
             <p>
-              We&apos;d love to hear from you. Get in touch with our
-              professional team to discuss your cleaning needs or request a free
-              quote.
+              We&apos;d love to hear from you. Contact Peakland Cleaning
+              Services to discuss your domestic or commercial cleaning needs and
+              request a free quote.
             </p>
           </div>
         </div>
@@ -80,8 +87,8 @@ const Contact = () => {
             <div>
               <h2>Request a Free Quote</h2>
               <p>
-                Fill out the form below and our team will get back to you
-                shortly.
+                Fill in the form below and our team will get back to you shortly
+                with a free consultation.
               </p>
 
               {submitted ? (
@@ -91,7 +98,8 @@ const Contact = () => {
                   </div>
                   <h3>Message Sent!</h3>
                   <p>
-                    Thank you for contacting us. We&apos;ll respond shortly.
+                    Thank you for contacting Peakland. We&apos;ll get back to
+                    you shortly.
                   </p>
                 </div>
               ) : (
@@ -132,15 +140,16 @@ const Contact = () => {
                   >
                     <option value="">Select subject</option>
                     <option value="general">General Inquiry</option>
-                    <option value="residential">Residential Cleaning</option>
+                    <option value="domestic">Domestic Cleaning</option>
                     <option value="commercial">Commercial Cleaning</option>
+                    <option value="specialized">Specialized Cleaning</option>
                     <option value="quote">Request a Free Quote</option>
                   </select>
 
                   <textarea
                     name="message"
                     rows="6"
-                    placeholder="Tell us about your cleaning needs..."
+                    placeholder="Tell us about your property and cleaning requirements..."
                     value={formData.message}
                     onChange={handleChange}
                     required
@@ -185,8 +194,8 @@ const Contact = () => {
 
               <div className={styles.imageWrap}>
                 <ImageWithFallback
-                  src="https://unsplash.com/photos/silhouette-of-man-standing-near-glass-window-during-daytime-3hO8igCybds"
-                  alt="Professional cleaning service team"
+                  src={contactImage}
+                  alt="Peakland cleaning services team"
                   className={styles.image}
                 />
               </div>
@@ -197,8 +206,8 @@ const Contact = () => {
 
       <section className={styles.emergency}>
         <Phone size={48} color="white" />
-        <h2>Ready to Book a Cleaning Service?</h2>
-        <p>Call our professional team today to discuss your needs.</p>
+        <h2>Ready for a Spotless Space?</h2>
+        <p>Call Peakland today to book your cleaning service.</p>
         <a href="tel:+447584134225">
           <Phone size={18} />
           Call 07584 134225

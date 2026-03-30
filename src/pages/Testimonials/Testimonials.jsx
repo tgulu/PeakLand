@@ -27,19 +27,17 @@ const Testimonials = () => {
           <span className={styles.testimonials__badge}>Testimonial</span>
 
           <h2 className={styles.testimonials__title}>
-            Over 500 Positive Reviews
+            Trusted by Homes and Businesses
           </h2>
 
           <p className={styles.testimonials__subtitle}>
-            Real stories from happy homeowners who trust Peakland to keep their
-            spaces fresh spotless and worry free.
+            Real feedback from clients who trust Peakland Cleaning Services for
+            reliable, high quality cleaning.
           </p>
 
           <div className={styles.testimonials__rating}>
             <span className={styles.testimonials__stars}>★★★★★</span>
-            <span className={styles.testimonials__score}>
-              4.5 (4,234 reviews)
-            </span>
+            <span className={styles.testimonials__score}>Consistently rated 5 stars</span>
           </div>
         </div>
 

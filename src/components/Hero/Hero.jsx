@@ -1,4 +1,4 @@
-import NavBar from "../NavBar/NavBar";
+import { Link } from "react-router-dom";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
@@ -8,20 +8,22 @@ const Hero = () => {
         <div className={styles.hero__background}>
           <div className={styles.hero__content}>
             <h1 className={styles.hero__title}>
-              Peakland Professional Cleaning{" "}
-              <span className={styles.hero__span}>Services </span>{" "}
+              Peakland <span className={styles.hero__span}>Cleaning</span>{" "}
+              Services
             </h1>
 
             <p className={styles.hero__subtitle}>
-              Enjoy a spotless space with our trusted cleaning professionals.
-              Eco friendly flexible and always on time.
+              Sparkling clean, every time. Trusted domestic and commercial
+              cleaning across West Sussex, Brighton & Hove, and East Sussex.
             </p>
             <div className={styles.hero__actions}>
-              <button className={styles.hero__primary}>Book Now</button>
+              <Link to="/contact" className={styles.hero__primary}>
+                Book Now
+              </Link>
 
-              <button className={styles.hero__secondary}>
+              <Link to="/services" className={styles.hero__secondary}>
                 See Our Services
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -31,26 +33,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-{
-  /* Peakland
-Cleaning Services
-
-Professional
-CLEANING
-SERVICES
-
-Sparkling Clean, Every Time!
-
-Our Services Include
-• Residential Cleaning
-• Commercial Cleaning
-• Move In Move Out Cleaning
-• Specialized Services
-
-Contact Us Today!
-
-0758134225
-
-www.peaklandservices.com */
-}
