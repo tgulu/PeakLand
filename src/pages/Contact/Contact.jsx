@@ -62,7 +62,7 @@ const Contact = () => {
       icon: Globe,
       title: "Website",
       details: "www.peaklandservices.com",
-      link: "https://www.peaklandservices.com",
+      link: null,
     },
   ];
 
@@ -87,8 +87,8 @@ const Contact = () => {
             <div>
               <h2>Request a Free Quote</h2>
               <p>
-                Fill in the form below and our team will get back to you
-                shortly with a free consultation.
+                Fill in the form below and our team will get back to you shortly
+                with a free consultation.
               </p>
 
               {submitted ? (

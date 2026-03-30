@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
@@ -46,12 +47,16 @@ const Footer = () => {
 
         <div className={styles.footer__column}>
           <h4 className={styles.footer__heading}>Services</h4>
-          <a>Domestic Cleaning</a>
-          <a>Commercial Cleaning</a>
-          <a>Window Cleaning</a>
-          <a>After Builders Cleaning</a>
-          <a>Holiday Let Cleaning</a>
-          <a>Move In and Move Out Cleaning</a>
+          <Link to="/services#domestic-cleaning">Domestic Cleaning</Link>
+          <Link to="/services#commercial-cleaning">Commercial Cleaning</Link>
+          <Link to="/services#window-cleaning">Window Cleaning</Link>
+          <Link to="/services#after-builders-cleaning">
+            After Builders Cleaning
+          </Link>
+          <Link to="/services#holiday-let-cleaning">Holiday Let Cleaning</Link>
+          <Link to="/services#move-in-and-move-out-cleaning">
+            Move In and Move Out Cleaning
+          </Link>
         </div>
       </div>
 
