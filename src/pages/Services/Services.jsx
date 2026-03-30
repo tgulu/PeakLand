@@ -45,6 +45,13 @@ const serviceCards = [
   },
 ];
 
+const slugify = (text) =>
+  text
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
+
 const Services = () => {
   return (
     <section className={styles.services}>
@@ -62,6 +69,7 @@ const Services = () => {
         <div className={styles.services__grid}>
           {serviceCards.map((service) => (
             <article
+              id={slugify(service.title)}
               key={service.title}
               className={styles.services__card}
               style={{ backgroundImage: `url(${service.image})` }}
