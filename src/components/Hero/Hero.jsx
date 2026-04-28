@@ -1,12 +1,36 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const titleTranslate = Math.min(scrollY * 0.25, 60);
+  const bgTranslate = Math.min(scrollY * 0.4, 80);
+
   return (
     <section id="Home">
       <div className={styles.hero__container}>
-        <div className={styles.hero__background}>
-          <div className={styles.hero__content}>
+        <div
+          className={styles.hero__background}
+          style={{ transform: `translateY(${bgTranslate}px)` }}
+        >
+          <div
+            className={styles.hero__content}
+            style={{ transform: `translateY(${titleTranslate}px)` }}
+          >
             <h1 className={styles.hero__title}>
               Peakland <span className={styles.hero__span}>Cleaning</span>{" "}
               Services

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Send, Globe } from "lucide-react";
 import { ImageWithFallback } from "../../components/ui/ImageWithFallback/ImageWithFallback";
-import contactImage from "../../assets/cleanerBottle.jpg";
+import contactImage from "../../assets/3PeopleClean.jpg";
 import styles from "./Contact.module.css";
 
 const Contact = () => {

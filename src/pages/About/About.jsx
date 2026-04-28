@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./About.module.css";
 import aboutOne from "../../assets/ladderClean.jpg";
-import aboutTwo from "../../assets/mop.jpg";
+import aboutTwo from "../../assets/smoke hoover.jpg";
 
 const About = () => {
   return (
