@@ -9,7 +9,7 @@ const About = () => {
       <div className={styles.about__container}>
         {/* Left content */}
         <div className={styles.about__content}>
-          <span className={styles.about__badge}>About Us</span>
+          {/* <span className={styles.about__badge}>About Us</span> */}
 
           <h2 className={styles.about__title}>
             Trusted Domestic and Commercial Cleaning Across Sussex
