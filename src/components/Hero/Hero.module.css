@@ -10,15 +10,21 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  background-image: url("../../assets/3PeopleClean.jpg");
-  background-size: cover;
+  /* background-image: url("../../assets/3PeopleClean.jpg"); */
+  background-image: url("../../assets/b&wClean.jpg");
+
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   padding-top: 88px;
   padding-bottom: 3rem;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
 }
 
 .hero__content {
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
   max-width: 520px;
   margin-left: 60px;
   color: white;
