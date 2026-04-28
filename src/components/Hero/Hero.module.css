@@ -109,3 +109,16 @@
 .hero__secondary:hover::after {
   opacity: 0.8;
 }
+
+
+
+
+@media (max-width: 1000px) {
+  .hero__background {
+  background-image: url("../../assets/ladderClean.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+    
+  }
+}
