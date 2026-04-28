@@ -1,10 +1,10 @@
 import styles from "./Services.module.css";
-import cleanerBottle from "../../assets/cleanerBottle.jpg";
-import cleanWindow from "../../assets/cleanWindow.jpg";
-import ladderClean from "../../assets/ladderClean.jpg";
-import mop from "../../assets/mop.jpg";
-import phoneClean from "../../assets/phoneClean.jpg";
-import blueClean from "../../assets/blueClean.jpg";
+import cleanerBottle from "../../assets/frontDoor.webp";
+import cleanWindow from "../../assets/kitchen.webp";
+import ladderClean from "../../assets/kitchenClear.webp";
+import mop from "../../assets/windowClean.webp";
+import phoneClean from "../../assets/sofaClean.webp";
+import blueClean from "../../assets/stairCase.webp";
 
 const serviceCards = [
   {
