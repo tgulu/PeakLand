@@ -30,9 +30,9 @@ const Footer = () => {
 
         <div className={styles.footer__column}>
           <h4 className={styles.footer__heading}>Areas We Cover</h4>
-          <a>West Sussex</a>
-          <a>Brighton & Hove</a>
-          <a>East Sussex</a>
+          <a href="/contact">West Sussex</a>
+          <a href="/contact">Brighton & Hove</a>
+          <a href="/contact">East Sussex</a>
         </div>
 
         <div className={styles.footer__column}>
