@@ -32,8 +32,9 @@ const Hero = () => {
             style={{ transform: `translateY(${titleTranslate}px)` }}
           >
             <h1 className={styles.hero__title}>
-              Peakland <span className={styles.hero__span}>Cleaning</span>{" "}
-              Services
+              Peakland
+              <br />
+              <span className={styles.hero__span}>Cleaning Services</span>
             </h1>
 
             <p className={styles.hero__subtitle}>
