@@ -11,7 +11,7 @@
   justify-content: flex-end;
   align-items: flex-start;
   /* background-image: url("../../assets/3PeopleClean.jpg"); */
-  background-image: url("../../assets/b&wClean.jpg");
+  background-image: url("../../assets/cleanWindow.jpg");
 
   background-size: 100%;
   background-position: center;
@@ -110,15 +110,11 @@
   opacity: 0.8;
 }
 
-
-
-
 @media (max-width: 1000px) {
   .hero__background {
-  background-image: url("../../assets/ladderClean.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-    
+    background-image: url("../../assets/ladderClean.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
