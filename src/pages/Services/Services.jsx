@@ -1,47 +1,49 @@
 import styles from "./Services.module.css";
-import cleanerBottle from "../../assets/frontDoor.webp";
-import cleanWindow from "../../assets/kitchen.webp";
-import ladderClean from "../../assets/kitchenClear.webp";
-import mop from "../../assets/windowClean.webp";
-import phoneClean from "../../assets/sofaClean.webp";
-import blueClean from "../../assets/stairCase.webp";
+
+import DomesticCleaning from "../../assets/frontDoor.webp";
+import CommercialCleaning from "../../assets/stairCase.webp";
+import WindowCleaning from "../../assets/windowClean.webp";
+// import WindowCleaning from "../../assets/kitchen.webp";
+import BuildersCleaning from "../../assets/kitchenClear.webp";
+import LetCleaning from "../../assets/sofaClean.webp";
+import MoveOutCleaning from "../../assets/kitchen.webp";
 
 const serviceCards = [
   {
     title: "Domestic Cleaning",
     description:
       "Routine or one-off home cleaning that keeps every room fresh, tidy, and spotless.",
-    image: cleanerBottle,
+    image: DomesticCleaning,
   },
   {
     title: "Commercial Cleaning",
     description:
       "Reliable cleaning for offices, shops, and shared business spaces with flexible scheduling.",
-    image: blueClean,
+    image: CommercialCleaning,
   },
   {
     title: "Window Cleaning",
     description:
       "Professional interior and exterior window cleaning for a clear, streak-free finish.",
-    image: cleanWindow,
+    image: WindowCleaning,
   },
   {
     title: "After Builders Cleaning",
     description:
       "Detailed post-renovation cleaning to remove dust and debris and leave your space ready to use.",
-    image: ladderClean,
+    image: BuildersCleaning,
   },
   {
     title: "Holiday Let Cleaning",
     description:
       "Fast turnaround cleans to keep holiday properties guest-ready between stays.",
-    image: phoneClean,
+    image: LetCleaning,
   },
   {
     title: "Move In and Move Out Cleaning",
     description:
       "Comprehensive end-of-tenancy and move-in cleans for a smooth handover.",
-    image: mop,
+    image: MoveOutCleaning,
   },
 ];
 
