@@ -43,19 +43,19 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "07584 134225",
+      details: "07584134225",
       link: "tel:+447584134225",
     },
     {
       icon: Mail,
       title: "Email",
       details: "peaklandcleaning@gmail.com",
-      link: "mailto:peaklandcleaning@gmail.com",
+      // link: "mailto:peaklandcleaning@gmail.com",
     },
     {
       icon: MapPin,
       title: "Areas We Cover",
-      details: "West Sussex, Brighton & Hove and East Sussex",
+      details: "Brighton & Hove, East Sussex and West Sussex",
       link: null,
     },
     {
@@ -164,7 +164,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <h2>Get In Touch</h2>
+              <h2 style={{ marginBottom: "0.5rem" }}>Get In Touch</h2>
 
               <div className={styles.infoList}>
                 {contactInfo.map((info, index) => {
