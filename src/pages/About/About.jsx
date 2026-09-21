@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "./About.module.css";
-import aboutOne from "../../assets/ladderClean.jpg";
-import aboutTwo from "../../assets/smoke hoover.jpg";
+
+const aboutImages = [
+  { className: styles.about__image1, alt: "Cleaning team" },
+  { className: styles.about__image2, alt: "Professional cleaners" },
+];
 
 const About = () => {
   return (
@@ -48,17 +51,14 @@ const About = () => {
 
         {/* Right images */}
         <div className={styles.about__images}>
-          <img
-            src={aboutOne}
-            alt="Cleaning team"
-            className={styles.about__image}
-          />
-
-          <img
-            src={aboutTwo}
-            alt="Professional cleaners"
-            className={styles.about__image}
-          />
+          {aboutImages.map(({ className, alt }) => (
+            <div
+              key={className}
+              className={`${styles.about__image} ${className}`}
+              role="img"
+              aria-label={alt}
+            />
+          ))}
         </div>
       </div>
     </section>

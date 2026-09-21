@@ -103,15 +103,39 @@
   height: auto;
   aspect-ratio: 16 / 9;
   border-radius: 1.5rem;
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow:
     rgba(255, 255, 255, 0.6) 5px 5px 20px -7px,
     rgb(255, 255, 255, 0.5) 0px 1px 3px -1px;
 }
 
+.about__image1 {
+  background-image: url("../../assets/ladderClean.jpg");
+}
+
+.about__image2 {
+  background-image: url("../../assets/smoke hoover.jpg");
+}
+
+/* Swap images here for mobile view */
+@media (max-width: 767px) {
+  .about__image1 {
+    background-image: url("../../assets/sofaCleanavif.webp");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .about__image2 {
+    background-image: url("../../assets/hooverSolo.jpg");
+    background-position: bottom;
+  }
+}
+
 /* Desktop  layout */
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .about__container {
     flex-direction: row;
     align-items: center;
@@ -128,8 +152,9 @@
   }
 
   .about__image {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 5;
     height: 350px;
+    width: 100%;
   }
 }
 
