@@ -15,13 +15,12 @@
 }
 
 .services__badge {
-  display: inline-block;
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  border: 1px solid #d7dbe3;
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
-  color: #18212f;
+  display: block;
+  font-size: clamp(1.1rem, 0.9rem + 1vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.75rem;
+  color: #2f80ed;
 }
 
 .services__sectionTitle {
