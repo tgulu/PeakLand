@@ -55,8 +55,10 @@ const NavBar = () => {
             </div>
 
             <div className={styles.brandText}>
-              <div className={styles.brandTitle}>Peakland</div>
-              <div className={styles.brandSubtitle}>Cleaning Services</div>
+              <h1 className={styles.brandTitle}>
+                Peakland{" "}
+                <span className={styles.brandSubtitle}>Cleaning Services</span>
+              </h1>
             </div>
           </Link>
 
