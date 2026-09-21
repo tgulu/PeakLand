@@ -12,7 +12,6 @@
   align-items: flex-start;
   /* background-image: url("../../assets/3PeopleClean.jpg"); */
   background-image: url("../../assets/cleanWindow.jpg");
-
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,7 +36,10 @@
 }
 
 .hero__span {
-  color: var(--span-color);
+  /* color: var(--span-color); */
+  text-shadow:
+    0 1px 10px rgb(0, 0, 0, 0.9),
+    0 1px 10px rgba(119, 119, 119, 0.1);
 }
 
 .hero__title {
@@ -50,8 +52,8 @@
 .hero__title,
 .hero__subtitle {
   text-shadow:
-    0 1px 90px rgb(0, 0, 0, 0.9),
-    0 1px 24px rgba(119, 119, 119, 0.1);
+    0 1px 10px rgb(0, 0, 0, 0.9),
+    0 1px 10px rgba(119, 119, 119, 0.1);
 }
 
 .hero__subtitle {
@@ -94,6 +96,7 @@
   cursor: pointer;
   position: relative;
   text-decoration: none;
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.5);
 }
 
 .hero__secondary::after {
@@ -112,9 +115,15 @@
 
 @media (max-width: 1000px) {
   .hero__background {
-    background-image: url("../../assets/ladderClean.jpg");
+    background-image: url("../../assets/b&wClean.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: left;
   }
 }
+
+/* @media (min-width: 2100px) {
+  .hero__content {
+    max-width: 1600px;
+  }
+} */
