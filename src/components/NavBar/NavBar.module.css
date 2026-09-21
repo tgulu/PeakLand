@@ -7,9 +7,9 @@
 }
 
 .container {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .inner {
@@ -51,14 +51,15 @@
 
 .brandTitle {
   color: #111827;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 500;
   line-height: 1.1;
+  margin-left: 0.25rem;
 }
 
 .brandSubtitle {
-  color: #6b7280;
-  font-size: 0.75rem;
+  color: #737883;
+  font-size: 2.2rem;
   line-height: 1.2;
 }
 
@@ -194,16 +195,48 @@
   background: #1d4ed8;
 }
 
-@media (min-width: 768px) {
-  .desktopNav {
-    display: flex;
+@media (max-width: 767px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .inner {
+    min-height: 70px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brandTitle {
+    font-size: 1.25rem;
+    margin-left: 0;
+    white-space: nowrap;
+  }
+
+  .brandSubtitle {
+    font-size: 1rem;
+  }
+
+  .brandIcon {
+    width: 36px;
+    height: 36px;
   }
 
   .mobileToggle {
-    display: none;
+    display: inline-flex;
+    flex-shrink: 0;
   }
+}
 
-  .mobileNav {
-    display: none;
+@media (min-width: 1280px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    padding: 0 5rem;
   }
 }
