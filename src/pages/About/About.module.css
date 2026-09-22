@@ -1,25 +1,23 @@
 .about {
-  width: 100%;
-  padding: 5rem 2rem;
+  padding: 3rem 1.25rem;
+  margin: 3rem 0rem;
   background-color: var(--background-color-dark);
 }
 
 /* Mobile first layout */
 
 .about__container {
-  max-width: 1200px;
   align-items: center;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  align-items: center;
+  gap: 2.5rem;
 }
 
 /* Left column */
 
 .about__content {
-  width: 100%; /* added */
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -29,25 +27,25 @@
   padding: 0.4rem 1rem;
   border-radius: 999px;
   border: 1px solid #e0e0e0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin-bottom: 1.5rem;
   width: fit-content;
   color: white;
 }
 
 .about__title {
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  margin-top: 1.9rem;
   color: #ffffff;
 }
 
-/* optional but helps mobile spacing */
 .about__text {
   font-size: 1rem;
   color: #fff7f7;
   margin-bottom: 2rem;
-  max-width: 480px;
+  max-width: 100%;
 }
 
 /* Feature list */
@@ -59,7 +57,8 @@
 }
 
 .about__list_item {
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
   padding-left: 2rem;
   position: relative;
   color: white;
@@ -75,8 +74,8 @@
 /* Button */
 
 .about__button {
-  display: inline-flex;
-  align-items: center;
+  /* display: inline-flex;
+  align-items: center; */
   padding: 0.8rem 2rem;
   border-radius: 999px;
   border: none;
@@ -86,6 +85,7 @@
   cursor: pointer;
   width: fit-content;
   text-decoration: none;
+  align-self: center;
 }
 
 /* Right column images mobile first */
@@ -107,8 +107,8 @@
   background-position: center;
   background-repeat: no-repeat;
   box-shadow:
-    rgba(255, 255, 255, 0.6) 5px 5px 20px -7px,
-    rgb(255, 255, 255, 0.5) 0px 1px 3px -1px;
+    rgba(255, 255, 255, 0.2) 5px 5px 20px -7px,
+    rgb(255, 255, 255, 0.2) 0px 1px 3px -1px;
 }
 
 .about__image1 {
@@ -133,16 +133,61 @@
   }
 }
 
-/* Desktop  layout */
+/* Tablet up */
+
+@media (min-width: 600px) {
+  .about {
+    padding: 4rem 2rem;
+  }
+
+  .about__title {
+    font-size: 2.4rem;
+  }
+
+  .about__text {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop layout */
 
 @media (min-width: 768px) {
+  .about {
+    padding: 5rem 1.2rem;
+  }
+
   .about__container {
     flex-direction: row;
     align-items: center;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .about__content {
     flex: 1;
+  }
+
+  .about__badge {
+    font-size: 1.9rem;
+  }
+
+  .about__title {
+    font-size: 2.9rem;
+  }
+
+  .about__text {
+    font-size: 1.8rem;
+  }
+
+  .about__list_item {
+    font-size: 1.65rem;
+  }
+
+  .about__button {
+    font-size: 1.9rem;
+    align-self: center;
   }
 
   .about__images {
@@ -152,7 +197,7 @@
   }
 
   .about__image {
-    aspect-ratio: 1 / 5;
+    aspect-ratio: 2 / 5;
     height: 350px;
     width: 100%;
   }
@@ -160,10 +205,45 @@
 
 @media (min-width: 2100px) {
   .about__image {
-    height: 500px;
+    height: auto;
+    aspect-ratio: 2 / 5;
   }
 
   .about__container {
-    max-width: 1600px;
+    max-width: 130rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .about__image {
+    height: 550px;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+  }
+
+  .about__container {
+    max-width: 2900px;
+    margin: 0 auto;
+  }
+
+  .about__badge {
+    font-size: 1.3rem;
+  }
+
+  .about__title {
+    font-size: 3.1rem;
+  }
+
+  .about__text {
+    font-size: 2.1rem;
+  }
+
+  .about__list_item {
+    font-size: 1.9rem;
+  }
+
+  .about__button {
+    font-size: 1.9rem;
+    align-self: center;
   }
 }
