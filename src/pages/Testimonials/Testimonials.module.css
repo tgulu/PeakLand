@@ -1,12 +1,41 @@
 .testimonials {
   width: 100%;
-  padding: 5rem 2rem;
+  padding: 5rem 0; /* CHANGED: horizontal padding moved to container below */
   background: var(--background-color-dark);
 }
 
 .testimonials__container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1.25rem; /* CHANGED: added responsive padding, matches Hero/About/Services */
+  box-sizing: border-box; /* CHANGED */
+}
+
+/* CHANGED: added full responsive ladder below, matching Hero/About/Services */
+@media (min-width: 600px) {
+  .testimonials__container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .testimonials__container {
+    padding: 0 3rem;
+    max-width: 1400px; /* laptop tier cap, part of 1200->2100 ladder */
+  }
+}
+
+@media (min-width: 1536px) {
+  .testimonials__container {
+    padding: 0 5rem;
+    max-width: 1800px; /* large-desktop tier cap */
+  }
+}
+
+@media (min-width: 2100px) {
+  .testimonials__container {
+    max-width: 2100px; /* ultra-wide final cap, as requested */
+  }
 }
 
 /* Header */
@@ -28,14 +57,14 @@
 }
 
 .testimonials__title {
-  font-size: 2.5rem;
+  font-size: var(--fs-h2); /* CHANGED: shared responsive h2 scale */
   font-weight: 700;
   margin-bottom: 1rem;
   color: #ffffff;
 }
 
 .testimonials__subtitle {
-  font-size: 1rem;
+  font-size: var(--fs-lead); /* CHANGED: shared responsive lead-paragraph scale */
   color: #b5b5b5;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -76,7 +105,7 @@
 }
 
 .testimonials__text {
-  font-size: 1rem;
+  font-size: var(--fs-body); /* CHANGED: shared responsive body/card-paragraph scale */
   line-height: 1.7;
   margin-bottom: 2rem;
   color: #e6e6e6;
@@ -107,7 +136,5 @@
     grid-template-columns: 1fr;
   }
 
-  .testimonials__title {
-    font-size: 2rem;
-  }
+  /* CHANGED: .testimonials__title font-size override removed — handled by shared clamp() scale */
 }

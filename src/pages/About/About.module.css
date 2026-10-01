@@ -1,5 +1,5 @@
 .about {
-  padding: 3rem 1.25rem;
+  padding: 3rem 0;
   margin: 3rem 0rem;
   background-color: var(--background-color-dark);
 }
@@ -12,6 +12,8 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
 }
 
 /* Left column */
@@ -34,7 +36,7 @@
 }
 
 .about__title {
-  font-size: 1.9rem;
+  font-size: var(--fs-h2); /* CHANGED: shared responsive h2 scale */
   font-weight: 700;
   margin-bottom: 1.5rem;
   margin-top: 1.9rem;
@@ -42,7 +44,7 @@
 }
 
 .about__text {
-  font-size: 1rem;
+  font-size: var(--fs-lead); /* CHANGED: shared responsive lead-paragraph scale */
   color: #fff7f7;
   margin-bottom: 2rem;
   max-width: 100%;
@@ -137,30 +139,28 @@
 
 @media (min-width: 600px) {
   .about {
-    padding: 4rem 2rem;
+    padding: 4rem 0;
   }
 
-  .about__title {
-    font-size: 2.4rem;
+  .about__container {
+    padding: 0 2rem;
   }
 
-  .about__text {
-    font-size: 1.1rem;
-  }
+  /* CHANGED: font-size overrides removed — .about__title/.about__text now scale via var(--fs-h2)/var(--fs-lead) */
 }
 
 /* Desktop layout */
 
 @media (min-width: 768px) {
   .about {
-    padding: 5rem 1.2rem;
+    padding: 5rem 0;
   }
 
   .about__container {
     flex-direction: row;
     align-items: center;
     gap: 3rem;
-    max-width: 1200px;
+    max-width: 1200px; /* laptop/small-desktop cap (restored; see 1280/1536/2100 tiers below) */
     width: 100%;
     margin: 0 auto;
   }
@@ -173,13 +173,7 @@
     font-size: 1.9rem;
   }
 
-  .about__title {
-    font-size: 2.9rem;
-  }
-
-  .about__text {
-    font-size: 1.8rem;
-  }
+  /* CHANGED: .about__title/.about__text font-size overrides removed — handled by shared clamp() scale */
 
   .about__list_item {
     font-size: 1.65rem;
@@ -203,14 +197,28 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .about__container {
+    padding: 0 7rem;
+    max-width: 1400px; /* CHANGED: laptop tier cap, part of 1200->2100 ladder */
+  }
+}
+
+@media (min-width: 1536px) {
+  .about__container {
+    padding: 0 5rem;
+    max-width: 1800px; /* CHANGED: large-desktop tier cap */
+  }
+}
+
 @media (min-width: 2100px) {
+  .about__container {
+    max-width: 2100px; /* CHANGED: ultra-wide final cap, as requested */
+  }
+
   .about__image {
     height: auto;
     aspect-ratio: 2 / 5;
-  }
-
-  .about__container {
-    max-width: 130rem;
   }
 }
 
@@ -221,22 +229,11 @@
     aspect-ratio: 4 / 5;
   }
 
-  .about__container {
-    max-width: 2900px;
-    margin: 0 auto;
-  }
-
   .about__badge {
     font-size: 1.3rem;
   }
 
-  .about__title {
-    font-size: 3.1rem;
-  }
-
-  .about__text {
-    font-size: 2.1rem;
-  }
+  /* CHANGED: .about__title/.about__text font-size overrides removed — capped by shared clamp() scale */
 
   .about__list_item {
     font-size: 1.9rem;
