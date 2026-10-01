@@ -2,21 +2,23 @@ import styles from "./Testimonials.module.css";
 
 const testimonials = [
   {
-    text: "Nobody has ever cleaned my place with such attention to detail. The team was friendly on time and left my home sparkling.",
-    name: "Fallah Maulana",
+    text: "Really happy with the clean, especially the kitchen and bathroom which needed the most work. Turned up on time and got straight to it.",
+    name: "Sarah Thompson",
     rating: 5,
   },
   {
-    text: "It is the first time my apartment has felt this fresh. Peakland really exceeded my expectations.",
-    name: "Hanifa Maulina",
-    rating: 5,
+    text: "Good job overall, missed a couple of spots on the skirting boards but nothing major. Would book again.",
+    name: "James Patterson",
+    rating: 4,
   },
   {
-    text: "They made my move out cleaning effortless. Everything looked brand new again totally worth it.",
-    name: "Hanifa Maulina",
+    text: "Used them for my move out clean and the landlord didn't have a single complaint, which says it all really.",
+    name: "Priya Shah",
     rating: 5,
   },
 ];
+
+const renderStars = (rating) => "★".repeat(rating) + "☆".repeat(5 - rating);
 
 const Testimonials = () => {
   return (
@@ -37,7 +39,7 @@ const Testimonials = () => {
 
           <div className={styles.testimonials__rating}>
             <span className={styles.testimonials__stars}>★★★★★</span>
-            <span className={styles.testimonials__score}>Consistently rated 5 stars</span>
+            <span className={styles.testimonials__score}>Rated 4.5+ stars by our clients</span>
           </div>
         </div>
 
@@ -51,7 +53,7 @@ const Testimonials = () => {
                 <span className={styles.testimonials__name}>{item.name}</span>
 
                 <span className={styles.testimonials__card_rating}>
-                  ★★★★★ {item.rating.toFixed(1)}
+                  {renderStars(item.rating)} {item.rating.toFixed(1)}
                 </span>
               </div>
             </div>
