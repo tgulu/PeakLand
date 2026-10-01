@@ -97,7 +97,7 @@
   padding: 0 1rem;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   font-weight: 500;
   transition: color 0.25s ease;
   white-space: nowrap;
@@ -135,7 +135,7 @@
 }
 
 .mobileToggle {
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background: transparent;
@@ -226,6 +226,16 @@
   .mobileToggle {
     display: inline-flex;
     flex-shrink: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .mobileToggle {
+    display: none;
   }
 }
 
