@@ -1,15 +1,44 @@
 .footer {
   background-color: #0b2b3a;
   color: #ffffff;
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 0 2rem; /* CHANGED: horizontal padding moved to container below */
 }
 
 .footer__container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1.25rem; /* CHANGED: matches Hero/About/Services/Testimonials scale */
+  box-sizing: border-box; /* CHANGED */
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.4fr;
   gap: 3rem;
+}
+
+/* CHANGED: added responsive ladder, matching Hero/About/Services/Testimonials */
+@media (min-width: 600px) {
+  .footer__container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer__container {
+    padding: 0 3rem;
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .footer__container {
+    padding: 0 5rem;
+    max-width: 1800px;
+  }
+}
+
+@media (min-width: 2100px) {
+  .footer__container {
+    max-width: 2100px;
+  }
 }
 
 /* Brand */

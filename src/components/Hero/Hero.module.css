@@ -33,12 +33,13 @@
   color: white;
   margin-bottom: 1rem;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: 2.9rem;
   font-weight: 900;
 }
 
 .hero__inner {
-  max-width: 560px;
+  max-width: 1200px;
+  background-color: rgba(147, 39, 125, 0.5);
 }
 
 .hero__span {
@@ -63,7 +64,9 @@
 }
 
 .hero__subtitle {
-  font-size: var(--fs-lead); /* CHANGED: shared responsive lead-paragraph scale */
+  font-size: var(
+    --fs-lead
+  ); /* CHANGED: shared responsive lead-paragraph scale */
   margin-bottom: 2rem;
   opacity: 1;
   line-height: 1.9rem;
@@ -138,6 +141,29 @@
   .hero__content {
     padding: 0 3rem;
     max-width: 1400px; /* CHANGED: laptop tier cap, part of 1200->2100 ladder */
+  }
+
+  .hero__actions {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .hero__primary {
+    padding: 16px 30px;
+    border-radius: 999px;
+    border: none;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  .hero__secondary {
+    padding: 12px 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  .hero__inner {
+    height: 35vh;
   }
 }
 
