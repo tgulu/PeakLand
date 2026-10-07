@@ -39,14 +39,13 @@
 
 .hero__inner {
   max-width: 1200px;
-  background-color: rgba(147, 39, 125, 0.5);
 }
 
 .hero__span {
   /* color: var(--span-color); */
   text-shadow:
     0 1px 10px rgb(0, 0, 0, 0.9),
-    0 1px 10px rgba(119, 119, 119, 0.1);
+    0 1px 10px rgba(24, 12, 12, 0.4);
 }
 
 .hero__title {
@@ -146,6 +145,10 @@
   .hero__actions {
     display: flex;
     gap: 1.5rem;
+  }
+
+  .hero__subtitle {
+    line-height: 2.9rem;
   }
 
   .hero__primary {
