@@ -1,7 +1,7 @@
-import styles from "./Services.module.css";
+import styles from "./ServicesPreview.module.css";
 import { serviceCards, slugify } from "../../data/servicesData";
 
-const Services = () => {
+const ServicesPreview = () => {
   return (
     <section className={styles.services}>
       <div className={styles.services__container}>
@@ -16,17 +16,21 @@ const Services = () => {
         </div>
 
         <div className={styles.services__grid}>
-          {serviceCards.map((service) => (
+          {serviceCards.map((service, index) => (
             <article
               id={slugify(service.title)}
               key={service.title}
               className={styles.services__card}
-              style={{ backgroundImage: `url(${service.image})` }}
             >
-              <div className={styles.services__overlay}>
-                <h3 className={styles.services__title}>{service.title}</h3>
-                <p className={styles.services__text}>{service.description}</p>
-              </div>
+              <span className={styles.services__index}>
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div
+                className={styles.services__thumb}
+                style={{ backgroundImage: `url(${service.image})` }}
+              />
+              <h3 className={styles.services__title}>{service.title}</h3>
+              <p className={styles.services__text}>{service.description}</p>
             </article>
           ))}
         </div>
@@ -35,4 +39,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesPreview;
